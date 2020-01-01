@@ -4,6 +4,7 @@ class CreateSales < ActiveRecord::Migration[5.2]
       t.string :commission_rate_basis_point
       t.string :commission_rate_percentage
       t.string :quantity
+      t.string :product_id
       t.string :commission_amount
 
       t.timestamps
