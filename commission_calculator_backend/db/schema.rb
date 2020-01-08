@@ -14,18 +14,17 @@ ActiveRecord::Schema.define(version: 2019_12_31_053607) do
 
   create_table "products", force: :cascade do |t|
     t.string "name"
-    t.string "price"
-    t.string "quantity"
-    t.string "sales_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "sales", force: :cascade do |t|
-    t.string "commission_rate_basis_point"
-    t.string "commission_rate_percentage"
-    t.string "product_id"
-    t.string "commission_amount"
+    t.float "commission_rate_basis_point"
+    t.integer "commission_rate_percentage"
+    t.float "price"
+    t.float "quantity"
+    t.integer "product_id"
+    t.float "commission_amount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

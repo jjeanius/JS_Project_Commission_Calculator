@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
     has_many :sales   # give you @product.sales
-    validates :name, presence: true
-    validates :quantity, presence: true
+    validates :name, uniqueness: true, allow_blank: false
+
 
 end
