@@ -1,9 +1,15 @@
 class SalesController < ApplicationController
 
-    def new
+
+  def index
+    @sales = Sale.all
+    render json: salesSerializer.new(@sales).to_serialized_json
+    end
+  
+  def new
     @sale = Sale.new
     render json: @sales
-end
+    end
 
   def create
     @sale = current_product.sales.build(sale_params) #  update the sales_params to accept employee_id
@@ -15,14 +21,10 @@ end
     end
   end
 
-  def index
-  @sales = Sale.all
-    render json: @sales, include:[:product]
-  end
-
+  
   def show
     set_sale
-    render json: @sales
+    render json: SalesSerializer.new(sale).to_serialized_json
   end
 
   def update
