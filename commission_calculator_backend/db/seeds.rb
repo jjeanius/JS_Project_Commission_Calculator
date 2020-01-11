@@ -17,3 +17,4 @@ s2 = Sale.create :commission_rate_basis_point=>40, :commission_rate_percentage=>
 s3 = Sale.create :commission_rate_basis_point=>0, :commission_rate_percentage=>10, :price=>10, :quantity=>1000, :product_id=> 3, :commission_amount=>1000
 s4 = Sale.create :commission_rate_basis_point=>0, :commission_rate_percentage=>15, :price=>15, :quantity=>1000, :product_id=> 4, :commission_amount=>2250
 s5 = Sale.create :commission_rate_basis_point=>0, :commission_rate_percentage=>20, :price=>20, :quantity=>1000, :product_id=> 5, :commission_amount=>4000
+@sale = Sale.create  
