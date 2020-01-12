@@ -21,7 +21,10 @@ class ProductsController < ApplicationController
 
     def show
         set_product
-        render json: ProductSerializer.new(@product)
+        options ={
+            include:[:sale]
+        }
+        render json: ProductSerializer.new(@product, options)
     end
 
     def edit

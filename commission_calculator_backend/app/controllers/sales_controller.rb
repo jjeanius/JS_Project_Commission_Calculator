@@ -24,7 +24,10 @@ class SalesController < ApplicationController
 
   def show
     set_sale
-    render json: SaleSerializer.new(@sale)
+    options = {
+      include: [:product]
+    }
+    render json: SaleSerializer.new(@sale, options)
   end
 
   def update
