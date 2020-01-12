@@ -3,9 +3,9 @@ class SalesController < ApplicationController
 
   def index
     @sales = Sale.all
-    render json: salesSerializer.new(@sales).to_serialized_json
+    render json: SaleSerializer.new(@sales)
     end
-  
+
   def new
     @sale = Sale.new
     render json: @sales
@@ -21,10 +21,10 @@ class SalesController < ApplicationController
     end
   end
 
-  
+
   def show
     set_sale
-    render json: SalesSerializer.new(sale).to_serialized_json
+    render json: SaleSerializer.new(@sale)
   end
 
   def update

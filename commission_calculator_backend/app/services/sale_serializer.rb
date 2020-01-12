@@ -1,4 +1,5 @@
-class SalesSerializer
+class SaleSerializer
+    belongs_to :product
 
     def initialize(sale_object)
         @sale = sale_object
@@ -13,4 +14,3 @@ class SalesSerializer
 end
 
 
-    
