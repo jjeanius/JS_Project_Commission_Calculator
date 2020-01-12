@@ -2,7 +2,7 @@ class ProductsController < ApplicationController
 
     def index
         @products = Product.all
-        render json: @products
+        render json: ProductSerializer.new(products)
     end
 
     def new
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
     def show
         set_product
-        redner json: @products
+        render json: ProductSerializer.new(@product)
     end
 
     def edit
