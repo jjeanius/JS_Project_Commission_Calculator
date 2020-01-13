@@ -2,18 +2,19 @@ class ProductsController < ApplicationController
 
     def index
         @products = Product.all
-        render json: ProductSerializer.new(products)
+        render json: ProductSerializer.new(@products)
     end
 
     def new
-        @product = Product.new
-        render json: @products
+        @product = Product.new(product_params)
+        @product.save
+        render json: @product
     end
 
     def create
-        @product = Product.new(paroduct_params)
+        @product = Product.new(product_params)
             if @product.save
-                render json: @products
+                render json: @product
             else
                 render 'new'
             end
@@ -22,7 +23,7 @@ class ProductsController < ApplicationController
     def show
         set_product
         options ={
-            include:[:sale]
+            include: [:sales]
         }
         render json: ProductSerializer.new(@product, options)
     end
@@ -30,7 +31,7 @@ class ProductsController < ApplicationController
     def edit
         set_product
             if @prodruct.save
-                render json: @products
+                render json: @product
             else
                 render 'edit'
             end
