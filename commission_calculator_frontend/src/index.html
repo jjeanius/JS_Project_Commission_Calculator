@@ -6,18 +6,54 @@
     <link rel="stylesheet" href="styles.css">
 
   </head>
+
   <body>
-    <header>
-      <h2> Commission Calculator </h2>
-    </header>
-
-    <main>
+    <h2> Commission Calculator </h2>  <br> <br>
 
 
+    <div class="container">
 
-      <script src="./src/index.js"></script>
+      <form id="commission-sales-form">
+        <ul>
+        <li><h3> Product Name: <input type="text" />  </h3>
+        <li><h3> Price:  <input type="integer"/> </h3>
+       <li><h3> Quantity:  <input type="integer"/> </h3>
+       <li><h3> Commission Rates:  <input type="integer"/> </h3> <br> <!-- % and bps-->
+       <h1><button id="buttonCalculate"> Calculate </button> </li><h1>
+       <h1>
+         <button id="buttonReset"> Reset </button> </h1>
+        </ul>
+      </form>
+===============================================================================================================
+<form>
+  <div class="row">
+    <div class="column" style="background-color:#white;">
+      <h3>Product</h3>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#white;">
+      <h3>Commission Rate</h3>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#white;">
+      <h3>Price</h3>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#white;">
+      <h3> Quantity</h3>
+      <p>Some text..</p>
+    </div>
+    <div class="column" style="background-color:#white;">
+      <h3> Commission Amount</h3>
+      <p>Some text..</p>
+    </div>
+
+
+
+      <script src="index.js" async></script>
+      </div>
     </main>
 
-
+  </form>
   </body>
 </html>

@@ -1,10 +1,10 @@
 body {
-    margin: 0;
+    margin: 20;
     padding: 0;
   }
 
   header {
-    background-color: #ebe866;
+    background-color: #94e5f0;
     margin: 0 auto;
     height: 50px;
   }
@@ -28,6 +28,12 @@ body {
     padding-bottom: 30px;
   }
 
+  .column{
+    float: left;
+    width: 18%;
+    padding: 10px;
+    height:300px;
+  }
   div.card {
     background-color: #eeeeee;
     height: 250px;
