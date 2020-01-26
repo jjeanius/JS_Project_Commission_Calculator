@@ -5,18 +5,10 @@ const mainDiv = document.querySelector('main') */
 
 let buttonCalculate = document.getElementById('buttonCalculate');
 let buttonReset = document.getElementById('buttonReset');
-let txt = document.getElementById('text')
-let lis = document.querySelectorAll('#commission-sales-form li');
-    lis.forEach(ev=>{
-
-        console.log(ev.target);
-    });
-
-
-    console.log(lis)
-
-
-
+let txt = document.getElementById('text');
+let inputPrice = document.getElementById('price');
+let inputQuantity = document.getElementById('quantity');
+let inputCommissionRate = document.getElementById('commission-rate');
 
 
 buttonCalculate.addEventListener('click', calculate);
@@ -29,15 +21,26 @@ buttonReset.addEventListener('click', reset);
         console.log(ev.type, ev.target, ev.currentTarget);
     }
 
- txt.addEventListener('input', text);
+txt.addEventListener('input', text);
     function text(ev){
         console.log(ev.target, ev.target.value);
-    }
+    };
 
-/*lis.addEventListener('input', li);
-    function li(ev){
+inputPrice.addEventListener('input', price);
+    function price(ev){
         console.log(ev.target, ev.target.value);
-    }; */
+    };
+
+inputQuantity.addEventListener('input', quantity);
+    function quantity(ev){
+        console.log(ev.target, ev.target.value);
+    };
+
+inputCommissionRate.addEventListener('input', commissionRate);
+    function commissionRate(ev){
+        console.log(ev.target, ev.target.value);
+    };
+
 
 
 
