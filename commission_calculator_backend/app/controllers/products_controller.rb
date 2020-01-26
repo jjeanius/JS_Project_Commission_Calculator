@@ -8,13 +8,13 @@ class ProductsController < ApplicationController
     def new
         @product = Product.new(product_params)
         @product.save
-        render json: @product
+        render json: ProductSerializer.new(@product)
     end
 
     def create
         @product = Product.new(product_params)
             if @product.save
-                render json: @product
+                render json: ProductSerializer.new(@product)
             else
                 render 'new'
             end
@@ -31,7 +31,10 @@ class ProductsController < ApplicationController
     def edit
         set_product
             if @prodruct.save
-                render json: @product
+                options ={
+                    include: [:sales]
+                }
+                render json: ProductSerializer.new(@product, option)
             else
                 render 'edit'
             end
