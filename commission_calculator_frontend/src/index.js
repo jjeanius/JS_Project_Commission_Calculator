@@ -29,10 +29,38 @@ buttonReset.addEventListener('click', function(ev){  // add even listener to the
     const addForm = document.forms['commission-sales-form'];   // create commission sales form
         addForm.addEventListener('submit', function(e){     // add even listener to the button
             e.preventDefault();
-            const product = addForm.querySelector('input[type="text"]').value;   
-            console.log(product)
+            const product = addForm.querySelector('input[type="text"]').value;
+            //const commission = addForm.querySelector('input[type="integer]').value;
+            const price = addForm.querySelector('input[type="integer"]').value;
+            const commission_rate = addForm.querySelector('input[type="integer"]').value;
+            const quantity = addForm.querySelector('input[type="integer"]').value;
+            const commission_amount = addForm.querySelector('input[type="integer"]').value;
 
-        })
+            //create elements
+            //const divrow = document.createElement('div.row');
+            //const divcolumn = document.createElement('div.column')
+            const h3 = document.createElement('h3');
+            const span = document.createElement('span');
+            const productName = document.createElement('productName');
+            const comm_rate = document.createElement('commission_rate');
+            const sales_price = document.createElement('price');
+            const share_quantity = document.createElement('qunatity');
+            const comm_amount = document.createElement('commission_amount');
+            const delete_button = document.createElement('delete');
+
+            // add content
+            delete_button.textContent = "delete";
+            productName.textContent = "productName"
 
 
+            //append to document
+            span.appendChild(productName);
+            span.appendChild(comm_rate);
+            span.appendChild(sales_price);
+            span.appendChild(share_quantity);
+            span.appendChild(comm_amount);
+            span.appendChild(delete_button)
+            addForm.appendChild(span);
 
+
+        });
