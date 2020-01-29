@@ -14,10 +14,10 @@ Array.from(inputs).forEach(function(input){  //change to array and iterate throu
         };
 })
 
-/* buttonCalculate.addEventListener('click', calculate);  // add event listener to the calculate button
+buttonCalculate.addEventListener('click', calculate);  // add event listener to the calculate button
     function calculate(ev){
         console.log(ev.type, ev.target, ev.currentTarget);
-    }  */
+    }
 
 buttonReset.addEventListener('click', function(ev){  // add even listener to the reset button
     if(ev.target.classInput == 'reset'){
@@ -53,7 +53,7 @@ const addForm = document.forms['commission-calculator'];   // create commission 
             productName.textContent = product
             comm_rate.textContent = commission_rate
             price.textContent = sales_price
-            sale_quantity.textContent = quantity
+            share_quantity.textContent = quantity
             comm_amount.textContent =commission_amount
 
 
