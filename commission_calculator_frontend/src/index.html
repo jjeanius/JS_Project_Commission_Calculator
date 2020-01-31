@@ -15,19 +15,19 @@
       <form id="commission-calculator">
         <ul>
           <p>
-            <li><h3 class="input"> Product Name: <input id ="text" type="text"/>  </h3>
+            <li><h3 class="input"> Product Name: <input id ="product" type="text"/>  </h3>
           </p>
 
           <p>
-            <li><h3 class ="input"> Price: <input id="price" type="integer"/> </h3>
+            <li><h3 class ="input"> Price: <input id="price" type="price"/> </h3>
           </p>
 
           <p>
-            <li><h3 class="input"> Quantity:  <input id="quantity" type="integer"/> </h3>
+            <li><h3 class="input"> Quantity:  <input id="quantity" type="quantity"/> </h3>
           </p>
 
           <p>
-            <li><h3 class="input"> Commission Rate:  <input id="commission-rate" type="integer"/> </h3> <br> <!-- % and bps-->
+            <li><h3 class="input"> Commission Rate:  <input id="commission_rate" type="commission_rate"/> </h3> <br> <!-- % and bps-->
           </p>
 
           <p>
@@ -39,34 +39,38 @@
           </p>
         </ul>
       </form>
+
+
       <!-- Commission Report -->
-<form>
+    <form>
 <class id="commission-report">
   <div class="row">
+      <ol>
     <div class="column" style="background-color:#white;">
-      <h3><span class="product">  Product</span> </h3>
+      <h3><span class="product" id="product_name">  Product</span> </h3>
+      <p></p>
      </div>
-      <!---- <p>Some text..</p> -->
 
     <div class="column" style="background-color:#white;">
-      <h3><span class="commission_rate"> Commission Rate </span> </h3>
+      <h3><span class="price" id="price"> Price </span> </h3>
+       <!---- <p>Some text..</p> -->
+    </div>
+
+    <div class="column" style="background-color:#white;">
+       <h3><span class="quantity" id="quantity"> Quantity </span> </h3>
+       <!---- <p>Some text..</p> -->
+      </div>
+
+    <div class="column" style="background-color:#white;">
+      <h3><span class="commission_rate" id="commission_rate"> Commission Rate </span> </h3>
       <!--Some text.  -->
     </div>
 
     <div class="column" style="background-color:#white;">
-      <h3><span class="price"> Price </span> </h3>
-      <!---- <p>Some text..</p> -->
-
-    </div>
-    <div class="column" style="background-color:#white;">
-      <h3><span class="quantity"> Quantity </span> </h3>
+      <h3><span class="commission_amount" id="commission_amount"> Commission Amount</> </span></h3>
       <!---- <p>Some text..</p> -->
     </div>
-
-    <div class="column" style="background-color:#white;">
-      <h3><span class="commission_amount"> Commission Amount</> </span></h3>
-      <!---- <p>Some text..</p> -->
-    </div>
+    </ol>
 
 
 

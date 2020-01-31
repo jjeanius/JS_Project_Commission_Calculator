@@ -30,42 +30,39 @@ const addForm = document.forms['commission-calculator'];   // create commission 
     addForm.addEventListener('submit', function(e){     // add even listener to the button
         e.preventDefault();
             const product = addForm.querySelector('input[type="text"]').value;
-            //const commission = addForm.querySelector('input[type="integer]').value;
-            const price = addForm.querySelector('input[type="integer"]').value;
-            const commission_rate = addForm.querySelector('input[type="integer"]').value;
-            const quantity = addForm.querySelector('input[type="integer"]').value;
-            const commission_amount = addForm.querySelector('input[type="integer"]').value;
+            const price = addForm.querySelector('input[type="price"]').value;
+            const commissionRate = addForm.querySelector('input[type="commission_rate"]').value;
+            const quantity = addForm.querySelector('input[type="quantity"]').value;
 
 //Commission Report - create elements
             //const divrow = document.createElement('div.row');
             //const divcolumn = document.createElement('div.column')
-            const h3 = document.createElement('h3');
+            //const h3 = document.createElement('h3');
             const span = document.createElement('span');
-            const productName = document.createElement('productName');
-            const comm_rate = document.createElement('commission_rate');
-            const sales_price = document.createElement('price');
-            const share_quantity = document.createElement('qunatity');
-            const comm_amount = document.createElement('commission_amount');
-            const delete_button = document.createElement('delete');
+            const productName = document.createElement('product_name');
+            const commRate = document.createElement('commission_rate');
+            const salesPrice = document.createElement('price');
+            const salesQuantity = document.createElement('qunatity');
+            const commAmount = document.createElement('commission_amount');
+            const deleteButton = document.createElement('delete');
 
             // add content
-            delete_button.textContent = "delete";
+            //deleteButton.textContent = delete
             productName.textContent = product
-            comm_rate.textContent = commission_rate
-            price.textContent = sales_price
-            share_quantity.textContent = quantity
-            comm_amount.textContent =commission_amount
-
-
+            salesPrice.textContent = price
+            salesQuantity.textContent = quantity
+            commRate.textContent = commission_rate
+            
+            commAmount.textContent = commission_amount
 
 
             //append to document
             span.appendChild(productName);
-            span.appendChild(comm_rate);
-            span.appendChild(sales_price);
-            span.appendChild(share_quantity);
-            span.appendChild(comm_amount);
-            span.appendChild(delete_button)
+            span.appendChild(commRate);
+            span.appendChild(salesPrice);
+            span.appendChild(salesQuantity);
+            span.appendChild(commAmount);
+            span.appendChild(deleteButton)
             addForm.appendChild(span);
 
 
