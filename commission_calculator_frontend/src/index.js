@@ -31,39 +31,39 @@ const addForm = document.forms['commission-calculator'];   // create commission 
         e.preventDefault();
             const product = addForm.querySelector('input[type="text"]').value;
             const price = addForm.querySelector('input[type="price"]').value;
-            const commissionRate = addForm.querySelector('input[type="commission_rate"]').value;
             const quantity = addForm.querySelector('input[type="quantity"]').value;
+            const commissionRate = addForm.querySelector('input[type="commission_rate"]').value;
 
-//Commission Report - create elements
+            //Commission Report - create elements
             //const divrow = document.createElement('div.row');
             //const divcolumn = document.createElement('div.column')
             //const h3 = document.createElement('h3');
             const span = document.createElement('span');
             const productName = document.createElement('product_name');
-            const commRate = document.createElement('commission_rate');
             const salesPrice = document.createElement('price');
-            const salesQuantity = document.createElement('qunatity');
+            const salesQuantity = document.createElement('quantity');
+            const commRate = document.createElement('commission_rate');
             const commAmount = document.createElement('commission_amount');
-            const deleteButton = document.createElement('delete');
+            const deleteButton = document.createElement('reset');
+
 
             // add content
-            //deleteButton.textContent = delete
-            productName.textContent = product
-            salesPrice.textContent = price
-            salesQuantity.textContent = quantity
-            commRate.textContent = commission_rate
-            
-            commAmount.textContent = commission_amount
+            // deleteButton.textContent = reset
+              productName.textContent = product
+              salesPrice.textContent = price
+              salesQuantity.textContent = quantity
+              commRate.textContent = commission_rate
+              commAmount.textContent =commission_amount
 
 
-            //append to document
-            span.appendChild(productName);
-            span.appendChild(commRate);
-            span.appendChild(salesPrice);
-            span.appendChild(salesQuantity);
-            span.appendChild(commAmount);
-            span.appendChild(deleteButton)
-            addForm.appendChild(span);
+              //append to document
+              span.appendChild(productName);
+              span.appendChild(salesPrice);
+              span.appendChild(salesQuantity);
+              span.appendChild(commRate);
+              span.appendChild(commAmount);
+              span.appendChild(deleteButton);
+              addForm.appendChild(span);
 
 
-        });
+          });
