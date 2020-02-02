@@ -1,7 +1,8 @@
-class ProductSerializer
-    include FastJsonapi::ObjectSerializer
-    has_many :sales
-    attributes :name
+class ProductSerializer < ActiveModel::Serializer
+   # has_many :sales
+    attributes :id, :name
+
+
 
 
 

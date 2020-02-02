@@ -22,7 +22,10 @@ gem 'puma', '~> 3.11'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'fast_jsonapi'   # to include Fast JSON API
+gem 'active_model_serializers', '~> 0.10.2'
+# user active model serializer
+
+#gem 'fast_jsonapi'   # to include Fast JSON API
 # use these serializer classes to define the specific attributes we want objects to share
 
 # Reduces boot times through caching; required in config/boot.rb
