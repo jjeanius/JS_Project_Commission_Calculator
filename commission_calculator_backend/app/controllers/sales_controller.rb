@@ -3,7 +3,7 @@ class SalesController < ApplicationController
 
   def index
     @sales = Sale.all
-    render json: SaleSerializer.new(@sales)
+    render json: @sales
     end
 
   def new
