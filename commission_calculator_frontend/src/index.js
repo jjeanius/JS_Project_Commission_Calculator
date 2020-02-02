@@ -52,8 +52,8 @@ const addForm = document.forms['commission-calculator'];   // create commission 
               productName.textContent = product
               salesPrice.textContent = price
               salesQuantity.textContent = quantity
-              commRate.textContent = commission_rate
-              commAmount.textContent =commission_amount
+              commRate.innrtHTML = commission_rate
+              commAmount.innerHTML =commission_amount
 
 
               //append to document
