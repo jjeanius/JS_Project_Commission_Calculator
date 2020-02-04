@@ -1,5 +1,5 @@
 class ProductSerializer < ActiveModel::Serializer
-   # has_many :sales
+    has_many :sales
     attributes :id, :name
 
 

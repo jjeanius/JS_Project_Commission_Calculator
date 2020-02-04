@@ -1,34 +1,6 @@
-const Base_URL = "http://localhost:3000/"
-const Product_URL = '${Base_URL}'/products
-const Sales_URL = '${Sales_URL}'/sales
-const mainDiv = document.querySelector('main') 
+const sale = new Sale()  //create a new instances of sale
 
- return fetch(Product_URL)
-            .then (response => response.json())
-            .then(getProducts)
-
-    function getProducts(products)
-        products.forEach(product =>{
-            let productString = " "
-        product.sales.forEach(sale => {
-            productString +=<li> ${product.name} </li>
-        })
-
-
- document.getElementById('Calculate').addEventListener('click, upload');
-
-    function upload(ev){
-        ev.preventDefault();   //stop the form submitting
-    }
-
-
-function calculate() {
-    calculate_commission_percentage;
-}
-
-}
-
-
+/*
 let buttonCalculate = document.getElementById('buttonCalculate');
 let buttonReset = document.getElementById('buttonReset');
 let inputs = document.querySelectorAll('#commission-calculator .input');  //nodelist
@@ -93,3 +65,5 @@ const addForm = document.forms['commission-calculator'];   // create commission 
 
 
           });
+
+          */

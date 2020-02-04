@@ -26,7 +26,7 @@ class SalesController < ApplicationController
     options = {
       include: [:product]
     }
-    render json: SaleSerializer.new(@sale, options)
+    render json: @sale
   end
 
   def update
