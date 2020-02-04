@@ -1,7 +1,33 @@
-/*const Base_URL = "http://localhost:3000/"
+const Base_URL = "http://localhost:3000/"
 const Product_URL = '${Base_URL}'/products
 const Sales_URL = '${Sales_URL}'/sales
-const mainDiv = document.querySelector('main') */
+const mainDiv = document.querySelector('main') 
+
+ return fetch(Product_URL)
+            .then (response => response.json())
+            .then(getProducts)
+
+    function getProducts(products)
+        products.forEach(product =>{
+            let productString = " "
+        product.sales.forEach(sale => {
+            productString +=<li> ${product.name} </li>
+        })
+
+
+ document.getElementById('Calculate').addEventListener('click, upload');
+
+    function upload(ev){
+        ev.preventDefault();   //stop the form submitting
+    }
+
+
+function calculate() {
+    calculate_commission_percentage;
+}
+
+}
+
 
 let buttonCalculate = document.getElementById('buttonCalculate');
 let buttonReset = document.getElementById('buttonReset');
@@ -20,9 +46,9 @@ buttonCalculate.addEventListener('click', calculate);  // add event listener to 
     }
 
 buttonReset.addEventListener('click', function(ev){  // add even listener to the reset button
-    if(ev.target.classInput == 'reset'){
+    if(ev.target.value == 'Reset'){
        const li = e.target.parentElement;
-       buttonReset.removeChild(li)
+       buttonReset.removeChild(inputs)
     }
     });
 
