@@ -5,7 +5,7 @@ class Sale < ApplicationRecord
     accepts_nested_attributes_for :product, allow_destroy: true
 
 
-    def commission_type
+    def commission_amount
         if commission_type == "bps"
             bps
         if commission_type == "percentage"
