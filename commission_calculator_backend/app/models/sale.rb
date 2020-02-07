@@ -5,13 +5,19 @@ class Sale < ApplicationRecord
     accepts_nested_attributes_for :product, allow_destroy: true
     attr_accessor :product
 
- 
-    def total_commission_bps
-        @total_commission_bps = (quantity * price)/10000 * commission_rate_basis_points
+    def commission_type
+        if commission_type === "bps"
+            bps
+        if commission_type ==="percentage"
+            percentage
+        end
     end
 
-    def total_commission_percentage
-        @total_commission_percentage = (quantity * price)* commission_rate_percentage/100
+    def bps  # basis point calculation
+        @commission_amount = (quantity * price)/10000 * commission_rate
+
+    def percentage  # percentage calculation
+        @commission_amount = (quantity * price)* commission_rate/100
     end
 
 

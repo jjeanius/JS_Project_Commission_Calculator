@@ -59,7 +59,12 @@ class SalesController < ApplicationController
   end
 
   def sale_params
-    params.require(:sale).permit(:product_id, :quantity, :price, :commission_rate_basis_point, :commission_rate_percentage, :commission_amount)
+    params.require(:sale).permit(:product_id,
+      :quantity,
+      :price,
+      :commission_rate,
+      :commission_amount,
+      :commission_type)
   end
 
 end

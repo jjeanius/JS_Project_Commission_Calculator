@@ -5,12 +5,14 @@ class Sale {         // create a new instances of sale
        quantity,
        product,
        commission,
+       commissionType
       ) {
         this.commissionRate = commissionRate
         this.price = price;
         this.quantity = quantity;
         this.product = product;
         this.commission = commission;
+        this.commissionType = commissionType
         this.products = new Products();  // create new instances of Products class
         }
     }
