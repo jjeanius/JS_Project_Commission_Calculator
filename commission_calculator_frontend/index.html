@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <title> Commission Calculator</title>
+     <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <form action="/action_page.php" id="commission-calculator"  >
+        <fieldset><br>
+          <legend><h2> Commission Calculator </h2> </legend>
+
+
+           <p>
+            <h3 class = "product"> Product Name: <input type="text" id ="product" /></h3>
+           </p>
+
+          <p>
+            <h3 class = "price"> Price: <input type = "float" id="price"/> </h3>
+          </p>
+
+          <p>
+            <h3> Quantity:  <input type="float" id="quantity"/> </h3>
+          </p>
+
+          <p>
+            <h3> Commission Rate:  <input type = "interger" id="commission_rate" type="commission_rate"/>
+          </p>
+
+          <p>
+            <h3>  Commission Type: <input type ="checkbox" id="percentage"> Percentage</input type> <input type ="checkbox" id="bps"> Basis Point </input><h3/>
+            </p>
+
+          <p>
+            <button type="button" id="buttonCalculate"> Calculate </button>
+          </p>
+
+          <p>
+            <button type="button" id="buttonReset"> Reset </button>
+          </p>
+        </ul>
+    </div>
+    <br>
+    <br>
+
+      <!-- Commission Report -->
+
+      <div class="container" form id="commission-report">
+
+        <div class="row"> </div>
+
+        <div class="column" style="background-color:#white;">
+          <span class="product" id="product_name">  Product</span>
+        </div>
+
+        <div class="column" style="background-color:#white;">
+          <span class="price" id="price"> Price </span>
+           <!---- <p>Some text..</p> -->
+        </div>
+
+        <div class="column" style="background-color:#white;">
+           <span class="quantity" id="quantity"> Quantity </span>
+           <!---- <p>Some text..</p> -->
+        </div>
+
+        <div class="column" style="background-color:#white;">
+          <span class="commission_rate" id="commission_rate"> Commission Rate </span>
+          <!--Some text.  -->
+        </div>
+
+        <div class="column" style="background-color:#white;">
+          <span class="commission_amount" id="commission_amount"> Commission Amount</> </span>
+          <!---- <p>Some text..</p> -->
+        </div>
+        </fieldset>
+    </main>
+  </div>
+
+  <script src="index.js" />
+  <script src="src/components/product.js" />
+  <script src="src/components/sale.js" />
+  <script src="src/adapters/ProductsAdadpter.js" />
+  <script src="src/components/products.js" />
+
+  </body>
+</html>

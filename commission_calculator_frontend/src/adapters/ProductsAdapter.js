@@ -10,7 +10,7 @@ class ProductsAdapter{  //talk to our backend API
         }
 
     }
-}
+
 
 // adapter = new ProductAdapter()
 // adapter.getProducts() // this will get product from our database
