@@ -1,3 +1,4 @@
+
 class Sale {         // create a new instances of sale
     constructor(
        commissionRate,
@@ -13,6 +14,8 @@ class Sale {         // create a new instances of sale
         this.product = product;
         this.commission = commission;
         this.commissionType = commissionType
-        this.products = new Products();  // create new instances of Products class
+        
         }
     }
+
+    console.log(Sale)

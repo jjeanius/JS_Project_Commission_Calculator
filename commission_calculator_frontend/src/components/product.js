@@ -1,6 +1,8 @@
 class Product {
-    constructor(name, sale){
+    constructor(name){
     this.name = name;
-    this.sale = new Sale();
+    const sale = new Sale();
     }
 }
+
+console.log('productHello')
