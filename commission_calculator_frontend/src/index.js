@@ -1,6 +1,4 @@
 const product = new Product()  // create a instance of a product
-const products = new Products()
-
 
     console.log('Hello')
 
