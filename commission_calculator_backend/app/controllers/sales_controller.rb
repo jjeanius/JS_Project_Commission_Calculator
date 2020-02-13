@@ -1,8 +1,11 @@
 class SalesController < ApplicationController
 
   def index
-    @sales = Sale.all
+    if @sales = Sale.all
+      
       render json: @sales
+    end
+
     end
 
   def new
@@ -22,7 +25,7 @@ class SalesController < ApplicationController
 
   def show
     set_sale
-    options = {
+      options = {
       include: [:products]
     }
     render json: @sale
@@ -48,6 +51,12 @@ class SalesController < ApplicationController
       render json: @sales
   end
 
+  def commission_amount
+   @calculate_commission = commission_amount
+  end
+
+
+
   private
 
   def set_sale
@@ -63,4 +72,4 @@ class SalesController < ApplicationController
       :commission_type)
   end
 
-end
+ end
