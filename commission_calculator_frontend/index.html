@@ -4,16 +4,16 @@
     <meta charset="utf-8">
      <title> Commission Calculator</title>
      <link rel="stylesheet" href="styles.css">
+     <link href="/favicon.ico" type="image/x-icon" rel="icon" />
   </head>
 
   <body>
-    <form action="/action_page.php" id="commission-calculator"  >
+    <form action="/action_page.php" id="commission-calculator">
         <fieldset><br>
           <legend><h2> Commission Calculator </h2> </legend>
 
-
            <p>
-            <h3 class = "product"> Product Name: <input type="text" id ="product" /></h3>
+            <h3 class = "product"> Product Name: <input type="text" id ="product"/></h3>
            </p>
 
           <p>
@@ -50,26 +50,28 @@
 
         <div class="row"> </div>
 
-        <div class="column" style="background-color:#white;">
+        <div class="column">
           <span class="product" id="product_name">  Product</span>
+            <!---- <p>Some text..</p> -->
+
         </div>
 
-        <div class="column" style="background-color:#white;">
+        <div class="column">
           <span class="price" id="price"> Price </span>
            <!---- <p>Some text..</p> -->
         </div>
 
-        <div class="column" style="background-color:#white;">
+        <div class="column">
            <span class="quantity" id="quantity"> Quantity </span>
            <!---- <p>Some text..</p> -->
         </div>
 
-        <div class="column" style="background-color:#white;">
+        <div class="column">
           <span class="commission_rate" id="commission_rate"> Commission Rate </span>
           <!--Some text.  -->
         </div>
 
-        <div class="column" style="background-color:#white;">
+        <div class="column">
           <span class="commission_amount" id="commission_amount"> Commission Amount</> </span>
           <!---- <p>Some text..</p> -->
         </div>
@@ -77,11 +79,10 @@
     </main>
   </div>
   </form>
-
-  <script src='src/index.js' type='text/javascript'/>
-  <script src="src/components/sale.js"/>
-  <script src="src/adapters/ProductAdadpter.js"/>
-  <script src="src/components/product.js"/>
+  <script src="src/components/sale.js"></script>
+  <script src="src/components/product.js"></script>
+  <script src="src/adapters/ProductsAdapter.js"></script>
+  <script src="src/index.js"></script>
 
   </body>
 </html>
