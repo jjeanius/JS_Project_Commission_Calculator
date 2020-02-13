@@ -2,7 +2,7 @@ class SalesController < ApplicationController
 
   def index
     if @sales = Sale.all
-      
+
       render json: @sales
     end
 
@@ -53,6 +53,7 @@ class SalesController < ApplicationController
 
   def commission_amount
    @calculate_commission = commission_amount
+   render json: @sales
   end
 
 

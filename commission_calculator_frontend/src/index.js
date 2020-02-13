@@ -1,8 +1,8 @@
-const product = new Product()  // create a instance of a product
+const product = new Product()
+const sale = new Sale()  //create a new instance of sale
 
-    console.log('Hello')
+console.log('Index_Hello')
 
-// const sale = new Sale()  //create a new instance of sale
 
 //  the new keyword
 // - creates a new empty object{}

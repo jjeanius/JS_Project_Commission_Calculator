@@ -14,8 +14,7 @@ class Sale {         // create a new instances of sale
         this.product = product;
         this.commission = commission;
         this.commissionType = commissionType
-        
-        }
+          }
     }
 
     console.log(Sale)
