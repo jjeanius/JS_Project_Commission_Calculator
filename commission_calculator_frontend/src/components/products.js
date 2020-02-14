@@ -8,9 +8,8 @@ class Products {
         fetchAndLoadProducts(){
             this.adapter.getProducts().then(products => {
                 console.log(products)
-
             })
         }
     }
 
-console.log("products")
+//console.log("products")

@@ -1,7 +1,7 @@
 class ProductsAdapter{  //talk to our backend API
     constructor(){  // object with our constructor
         this.baseUrl =    // instantiate with the adapter, would set base url
-        'http://localhost:3000/'   //  and has ability to call get Product
+        'http://localhost:3000/api/'   //  and has ability to call get Product
     }
 
     getProducts(){     // make a fetch request to our base url
@@ -10,7 +10,7 @@ class ProductsAdapter{  //talk to our backend API
 
         }
     }
-
+//console.log("adapter")
 
 // adapter = new ProductAdapter()
 // adapter.getProducts() // this will get product from our database
