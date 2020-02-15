@@ -4,3 +4,5 @@ class Sale {         // create a new instances of sale
        this.products = new Products()
           }
         }
+
+        console.log("sale")

@@ -1,7 +1,7 @@
 const product = new Product()
 const sale = new Sale()  //create a new instance of sale
 
-//console.log('Index_Hello')
+console.log('Index_Hello')
 
 
 //  the new keyword

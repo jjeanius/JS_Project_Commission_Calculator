@@ -6,4 +6,4 @@ class Product {
         }
     }
 
-   // console.log("Product_Hello")
+    console.log("Product_Hello")
