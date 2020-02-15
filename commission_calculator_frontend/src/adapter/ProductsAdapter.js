@@ -5,8 +5,9 @@ class ProductsAdapter{  //talk to our backend API
     }
 
     getProducts(){     // make a fetch request to our base url
-        return fetch(this.baseUrl).then(res => res.json())   // once it recv response, we parce json from the response
-
+        return fetch(this.baseUrl)   // once it recv response, we parce json from the response
+        .then(response => response.text())
+        //.then(json => console.log(json));
         }
     }
 console.log("adapter")
