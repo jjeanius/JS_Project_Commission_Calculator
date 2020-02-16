@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
             if @product.save
                 render json: @product
             else
-                render 'new'
+                render 'index'
             end
         end
 
