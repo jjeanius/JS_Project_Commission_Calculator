@@ -8,52 +8,49 @@
   </head>
 
   <body>
-    <form action="/action_page.php" id="commission-calculator">
+    <form id="commission-calculator">
         <fieldset><br>
           <legend><h2> Commission Calculator </h2> </legend>
+          <div>
+            <p><h3 class = "product"> Product Name: <input type="text" id ="product"/></h3></p>
+          </div>
 
-           <p>
-            <h3 class = "product"> Product Name: <input type="text" id ="product"/></h3>
-           </p>
+          <div>
+            <p> <h3 class = "price"> Price: <input type = "float" id="price"/> </h3> </p>
+          </div>
 
-          <p>
-            <h3 class = "price"> Price: <input type = "float" id="price"/> </h3>
-          </p>
+          <div>
+            <p> <h3> Quantity:  <input type="float" id="quantity"/> </h3> </p>
+          </div>
 
-          <p>
-            <h3> Quantity:  <input type="float" id="quantity"/> </h3>
-          </p>
+          <div>
+            <p> <h3> Commission Rate:  <input type = "interger" id="commission_rate" type="commission_rate"/> </p>
+          </div>
 
-          <p>
-            <h3> Commission Rate:  <input type = "interger" id="commission_rate" type="commission_rate"/>
-          </p>
+          <div>
+            <p> <h3>  Commission Type: <input type ="checkbox" id="percentage"> Percentage</input type> <input type ="checkbox" id="bps"> Basis Point </input><h3/> </p>
+          </div>
 
-          <p>
-            <h3>  Commission Type: <input type ="checkbox" id="percentage"> Percentage</input type> <input type ="checkbox" id="bps"> Basis Point </input><h3/>
-            </p>
+          <div>
+            <p> <button type="button" id="buttonCalculate"> Calculate </button> </p>
+          </div>
 
-          <p>
-            <button type="button" id="buttonCalculate"> Calculate </button>
-          </p>
-
-          <p>
-            <button type="button" id="buttonReset"> Reset </button>
-          </p>
-        </ul>
-    </div>
-    <br>
-    <br>
+          <div>
+            <p> <button type="button" id="buttonReset"> Reset </button> </p>
+          </div>
+           <br> <br>
+        </form>
 
       <!-- Commission Report -->
 
-      <div class="container" form id="commission-report">
+
+      <form id="commission-report">
 
         <div class="row"> </div>
 
         <div class="column">
           <span class="product" id="product_name">  Product</span>
             <!---- <p>Some text..</p> -->
-
         </div>
 
         <div class="column">
@@ -77,7 +74,7 @@
         </div>
         </fieldset>
     </main>
-  </div>
+  </form>
   </form>
   <script src="src/components/sale.js"> </script>
    <script src="src/components/products.js"> </script>
