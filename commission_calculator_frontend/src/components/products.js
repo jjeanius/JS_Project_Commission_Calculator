@@ -5,11 +5,28 @@ class Products {
         //this.bindEventListerners()  // at somepoint we want to evoke a method eventlisterner
         this.fetchAndLoadProducts()    // evoke the method
     }
-        fetchAndLoadProducts(){
+     fetchAndLoadProducts(){
             this.adapter.getProducts().then(products => {
               console.log(products)
             })
         }
     }
 
-console.log("products")
+       /* fetchAndLoadProducts(){
+            this.adapter
+            .getProducts()
+            .then(products => {
+              return console.log(products)
+        }
+            .then(()=> {
+                this.render()
+        })
+    } 
+         render(){
+            const producName = document.getElementById('product_name');
+            productName.innerHTML = "This is product"
+            console.log('my product are', this.products)
+        }
+    }
+
+*/
