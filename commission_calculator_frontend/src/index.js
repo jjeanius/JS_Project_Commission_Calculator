@@ -1,6 +1,6 @@
  const products = new Products()
- //const products = new Products()
- //const sales = new sales()  //create a new instance of sale
+
+const sales = new Sales()  //create a new instance of sale
 
 console.log('Index_Hello')
 
