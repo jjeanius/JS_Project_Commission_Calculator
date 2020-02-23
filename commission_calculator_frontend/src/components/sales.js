@@ -9,7 +9,8 @@ class Sales {         // create a new instances of sale
          this.adapter
          .getSales()
          .then(sales => {
-             sales.forEach(sale => this.sales.push(sale))
+             sales.forEach(sale => this.sales.push(new Sale(sale)))  // push new sale instance into Sales array and passing in saleJson
+           console.log(this.sales)  // array of sale objects
         })
          .then(() =>{
              this.render()
@@ -17,8 +18,9 @@ class Sales {         // create a new instances of sale
         }
 
      render(){
-        const salesContainer = document.getElementById('product_name')
-        salesContainer.innerHTML = "My sales here"
         console.log(this.sales)
+        const salesContainer = document.getElementById('product_name')
+     //   salesContainer.innerHTML = `${this.sales.map(sale => <li> ${sale.product} </li>)}`
+
      }
     }
