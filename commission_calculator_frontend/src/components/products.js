@@ -1,10 +1,13 @@
 class Products {
     constructor(){
-        this.Products = Products
+        this.Products = Products;
+    //    this.sales = new Sales();
     }
 }
 
- /*   
+console.log("Products_hello")
+
+ /*
  class Products {
     constructor(){
         this.Products = []  // set property of product and set it to empty array
