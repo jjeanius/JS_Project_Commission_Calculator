@@ -17,10 +17,10 @@ class Sales {         // create a new instances of sale
          }
 
          render() {
+             const salesContainer = document.getElementById('product_column');
+             salesContainer.innerHTML += this.sales.map(sale => `<li>${sale.sale.product.name}<li>`).join('')
 
-             const salesContainer = document.getElementById('sales_container');
-             salesContainer.innerHTML += this.sales.map(sale => `<li> ${sale.product}, ${sale.product} </li>`).join(' ')
-
-          console.log(this.sales);
+            const priceContainer = document.getElementById('price_column');
+            priceContainer.innerHTML += this.sales.map(sale => `<li> ${sale.sale.price} </li>`).join('')
          }
      }

@@ -12,11 +12,11 @@
         <fieldset><br>
           <legend><h2> Commission Calculator </h2> </legend>
           <div>
-            <p><h3 class = "product"> Product Name: <input type="text" id ="product"/></h3></p>
+            <p><h3> Product Name: <input type="text" id ="product"/></h3></p>
           </div>
 
           <div>
-            <p> <h3 class = "price"> Price: <input type = "float" id="price"/> </h3> </p>
+            <p> <h3> Price: <input type = "float" id="price"/> </h3> </p>
           </div>
 
           <div>
@@ -24,7 +24,7 @@
           </div>
 
           <div>
-            <p> <h3> Commission Rate:  <input type = "interger" id="commission_rate" type="commission_rate"/> </p>
+            <p> <h3 > Commission Rate:  <input type = "interger" id="commission_rate" type="commission_rate"/> </p>
           </div>
 
           <div>
@@ -38,24 +38,51 @@
           <div>
             <p> <button type="button" id="buttonReset"> Reset </button> </p>
           </div>
-           <br> <br>
+           <br>
         </form>
 
       <!-- Commission Report -->
 
 
-      <form id="commission-report">
+    <fieldset><br>
+        <legend><h2> Commission Report </h2> </legend>
 
-        <ul>
-            <div id="sales_container"></div>
-        </ul>
+        <form id="commission-report">
+          <ol>
+            <div class ="row"> </div>
+
+            <div class="column"> <h3> Product </h3>
+                <span id="product_column"> </span>
+            </div>
+
+	        <div class="column"> <h3> Price </h3>
+	          <span id="price_column"> </span>
+
+	        </div>
+
+	        <div class="column"> <h3> Quantity </h3>
+	           <span id="quantity_column"> </span>
+	        </div>
+
+	        <div class="column"> <h3> Commission Rate </h3>
+	          <span id="rate_column"> </span>
+	        </div>
+
+	        <div class="column"> <h3> Commission Amount </h3>
+	          <span id="amount_column"> </span>
+	        </div>
+
+         </ol>
 
             </div>
         <br> <br>
         </fieldset>
+        <br> <br>
+        </fieldset>
+        <br> <br>
     </main>
   </form>
-  
+
   <script src="src/components/sales.js"> </script>
   <script src="src/components/sale.js"></script>
   <script src="src/components/products.js"> </script>
