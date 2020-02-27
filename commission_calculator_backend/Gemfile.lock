@@ -69,6 +69,7 @@ GEM
       ruby_dep (~> 1.2)
     loofah (2.4.0)
       crass (~> 1.0.2)
+      nokogiri (>= 1.10.8)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
