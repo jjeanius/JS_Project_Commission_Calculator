@@ -30,9 +30,10 @@ main {
 
 .column{
   float: left;
+  column-width: auto;
   width: 18%;
-  padding: 10px;
-  height:300px;
+  padding: 5px;
+  height:600px;
 }
 div.card {
   background-color: #eeeeee;
@@ -58,7 +59,7 @@ li {
 button {
   font-size: .65em;
   color: #fff;
-  background-color: green;
+  background-color: rgb(80, 67, 194);
   border-radius: 10px;
 }
 
