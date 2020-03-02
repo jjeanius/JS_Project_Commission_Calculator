@@ -18,23 +18,23 @@ class Sales {         // create a new instances of sale
                     console.log(ev.type, ev.target, ev.target.value);
                 }
 
-            price.document.addEventListener('input', price);
-                function product(ev){
+            price.document.addEventListener('input', priceInput);
+                function priceInput(ev){
                    console.log(ev.type, ev.target, ev.target.value);
                 }
 
-            quantity.ducment.addEventListener('input', quantity);
-                function quantity(ev){
+            quantity.ducment.addEventListener('input', quantityInput);
+                function quantityInput(ev){
                    console.log(ev.type, ev.target, ev.target.value);
                 }
 
-            commissionRate.document.addEventListener('input', rate);
-                function rate(ev){
+            commissionRate.document.addEventListener('input', commRateInput);
+                function commRateInput(ev){
                    console.log(ev.type, ev.target, ev.target.value);
                 }
 
-            commissionType.document.addEventListener('click',comType);
-                function comType(ev){
+            commissionType.document.addEventListener('click',comTypeInput);
+                function comTypeInput(ev){
                    console.log(ev.target, ev.target, ev.target.value)
                 }
         }
