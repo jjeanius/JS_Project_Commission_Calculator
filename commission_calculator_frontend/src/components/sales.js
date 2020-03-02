@@ -1,24 +1,47 @@
 class Sales {         // create a new instances of sale
-    constructor(){
+   constructor(){
        this.sales = []  // set property of sale and set it to an empty array
        this.adapter = new SalesAdapter()  //  create adapter
        this.addEventListeners()  //at somepoint we want to evoke a method eventlisterner
        this.fetchAndLoadSales()  // evoke the method
     }
 
-    addEventListeners(){
-       const calculateButton = document.getElementById('buttonCalculate');
-       calculateButton.addEventListener('click', calculate);
-            function calculate(ev){
-               ev.preventDefault()
+   addEventListeners(){
+      this.calculateButton = document.getElementById('buttonCalculate');
+      this.calculateButton.addEventListener('click', calculate);
+         function calculate(ev){
+            ev.preventDefault()
 
+         this.product = document.getElementById('product')
+         this.product.document.addEventListener('input', productInput);
+                function productInput(ev){
+                    console.log(ev.type, ev.target, ev.target.value);
+                }
 
-               console.log(ev.type, ev.target, ev.currentTarget);
+            price.document.addEventListener('input', price);
+                function product(ev){
+                   console.log(ev.type, ev.target, ev.target.value);
+                }
+
+            quantity.ducment.addEventListener('input', quantity);
+                function quantity(ev){
+                   console.log(ev.type, ev.target, ev.target.value);
+                }
+
+            commissionRate.document.addEventListener('input', rate);
+                function rate(ev){
+                   console.log(ev.type, ev.target, ev.target.value);
+                }
+
+            commissionType.document.addEventListener('click',comType);
+                function comType(ev){
+                   console.log(ev.target, ev.target, ev.target.value)
+                }
         }
 
        const resetButton = document.getElementById('buttonReset')
-       resetButton.addEventListener('click', reset);
-            function reset(ev){
+       resetButton.addEventListener('click', this.reset);
+            function reset (ev){
                console.log(ev.type, ev.target, ev.currentTarget);
             }
     }
@@ -35,7 +58,7 @@ class Sales {         // create a new instances of sale
          }
 
          render() {
-        //    console.log(this.sales)
+           console.log(this.sales)
 
             const productContainer = document.getElementById('product_column');
              productContainer.innerHTML += this.sales.map(sale => `<li>${sale.sale.product.name}<li>`).join(' ')
