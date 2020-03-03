@@ -1,55 +1,60 @@
 class Sales {         // create a new instances of sale
    constructor(){
-       this.sales = []  // set property of sale and set it to an empty array
-       this.adapter = new SalesAdapter()  //  create adapter
-       this.addEventListeners()  //at somepoint we want to evoke a method eventlisterner
-       this.fetchAndLoadSales()  // evoke the method
+      this.sales = []  // set property of sale and set it to an empty array
+      this.adapter = new SalesAdapter()  //  create adapter
+      this.initaddEventListeners()  //at somepoint we want to evoke a method eventlisterner
+      this.fetchAndLoadSales()  // evoke the method
     }
 
-   addEventListeners(){
+   initaddEventListeners(){
 
-      const product = document.getElementById('product_name')
-      product.addEventListener('input', productInput);
-         function productInput(ev){
-            console.log(ev.type, ev.target, ev.target.value);
-         }
 
-      const price = document.getElementById('price_input')
-      price.addEventListener('input', pricePerShare);
-         function pricePerShare(ev){
-            console.log(ev.type, ev.target, ev.target.value);
-         }
-      const quantity = document.getElementById('quantity_input')
-      quantity.addEventListener('input', totalQuantity);
-         function totalQuantity(ev){
-            console.log(ev.type, ev.target, ev.target.value);
-         }
+      this.productName = document.getElementById('product_name')
+      this.productName.addEventListener('input', productInput);
+      function productInput(ev){
+         console.log(ev.type, ev.target, ev.target.value);
+      }
 
-      const commission = document.getElementById('comm_rate_input')
-      commission.addEventListener('input', commRate);
-         function commRate(ev){
-            console.log(ev.type, ev.target, ev.target.value);
-         }
+      this.price = document.getElementById('price_input')
+      this.price.addEventListener('input', pricePerShare);
+      function pricePerShare(ev){
+         console.log(ev.type, ev.target, ev.target.value);
+      }
 
-      const commissionType = document.querySelector('.comm_type')
-      commissionType.addEventListener('click',comInputChecked);
-                function comInputChecked(ev){
-                   console.log(ev.target, ev.target, ev.target.value)
-                }
+      this. quantity = document.getElementById('quantity_input')
+      this.quantity.addEventListener('input', totalQuantity);
+      function totalQuantity(ev){
+         console.log(ev.type, ev.target, ev.target.value);
+      }
+
+      this.commission = document.getElementById('comm_rate_input')
+      this.commission.addEventListener('input', commRate);
+      function commRate(ev){
+         console.log(ev.type, ev.target, ev.target.value);
+      }
+
+      this.commissionType = document.querySelector('.comm_type')
+      this.commissionType.addEventListener('click',comInputChecked);
+         function comInputChecked(ev){
+            console.log(ev.target, ev.target, ev.target.value)
+      }
 
       this.calculateButton = document.getElementById('buttonCalculate');
       this.calculateButton.addEventListener('click', calculate);
          function calculate(ev){
             ev.preventDefault()
-        console.log(ev.type, ev.target, ev.currentTarget);
+            console.log(ev.type, ev.target, ev.currentTarget);
          }
 
-       const resetButton = document.getElementById('buttonReset')
-       resetButton.addEventListener('click', this.reset);
-            function reset (ev){
-               console.log(ev.type, ev.target, ev.currentTarget);
-            }
-    }
+      const resetButton = document.getElementById('buttonReset')
+      resetButton.addEventListener('click', this.reset);
+         function reset (ev){
+            console.log(ev.type, ev.target, ev.currentTarget);
+         }
+
+      }
+
+
 
     fetchAndLoadSales(){
        this.adapter
