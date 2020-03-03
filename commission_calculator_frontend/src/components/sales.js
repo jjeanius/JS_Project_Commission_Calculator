@@ -7,37 +7,42 @@ class Sales {         // create a new instances of sale
     }
 
    addEventListeners(){
+
+      const product = document.getElementById('product_name')
+      product.addEventListener('input', productInput);
+         function productInput(ev){
+            console.log(ev.type, ev.target, ev.target.value);
+         }
+
+      const price = document.getElementById('price_input')
+      price.addEventListener('input', pricePerShare);
+         function pricePerShare(ev){
+            console.log(ev.type, ev.target, ev.target.value);
+         }
+      const quantity = document.getElementById('quantity_input')
+      quantity.addEventListener('input', totalQuantity);
+         function totalQuantity(ev){
+            console.log(ev.type, ev.target, ev.target.value);
+         }
+
+      const commission = document.getElementById('comm_rate_input')
+      commission.addEventListener('input', commRate);
+         function commRate(ev){
+            console.log(ev.type, ev.target, ev.target.value);
+         }
+
+      const commissionType = document.querySelector('.comm_type')
+      commissionType.addEventListener('click',comInputChecked);
+                function comInputChecked(ev){
+                   console.log(ev.target, ev.target, ev.target.value)
+                }
+
       this.calculateButton = document.getElementById('buttonCalculate');
       this.calculateButton.addEventListener('click', calculate);
          function calculate(ev){
             ev.preventDefault()
-
-         this.product = document.getElementById('product')
-         this.product.document.addEventListener('input', productInput);
-                function productInput(ev){
-                    console.log(ev.type, ev.target, ev.target.value);
-                }
-
-            price.document.addEventListener('input', priceInput);
-                function priceInput(ev){
-                   console.log(ev.type, ev.target, ev.target.value);
-                }
-
-            quantity.ducment.addEventListener('input', quantityInput);
-                function quantityInput(ev){
-                   console.log(ev.type, ev.target, ev.target.value);
-                }
-
-            commissionRate.document.addEventListener('input', commRateInput);
-                function commRateInput(ev){
-                   console.log(ev.type, ev.target, ev.target.value);
-                }
-
-            commissionType.document.addEventListener('click',comTypeInput);
-                function comTypeInput(ev){
-                   console.log(ev.target, ev.target, ev.target.value)
-                }
-        }
+        console.log(ev.type, ev.target, ev.currentTarget);
+         }
 
        const resetButton = document.getElementById('buttonReset')
        resetButton.addEventListener('click', this.reset);
