@@ -28,8 +28,10 @@
           </div>
 
           <div>
-            <p> <h3>  Commission Type: <input class="comm_type" type ="checkbox" value="percentage"> Percentage</input type> <input class="comm_type" type ="checkbox" value="bps"> Basis Point </input><h3/> </p>
+            <p> <h3>  Commission Type: <input class="comm_type_percentage" type ="checkbox" value="percentage"> Percentage
+                                       <input class="comm_type_bps" type ="checkbox" value="basis_point"> Basis Point </input><h3/> </p>
           </div>
+          <br>
 
           <div>
             <p> <button type="button" id="buttonCalculate"> Calculate </button> </p>
@@ -53,11 +55,11 @@
 
             <div class="column"> <h3> Product </h3>
 
-                <li id="product_column"> </li>
+                <span id="product_column"> </span>
             </div>
 
 	        <div class="column"> <h3> Price </h3>
-	          <li id="price_column"> </li>
+	          <span id="price_column"> </span>
 
 	        </div>
 

@@ -9,4 +9,10 @@ getSales(){     // make a fetch request to our base url
  // .then(response =>response.text())  // convert to plan text (https://daveceddia.com/unexpected-token-in-json-at-position-0/)
  // .then(text => console.log(text))  // log it out
     }
+
+getCalculation(){
+    return fetch(this.baseUrl)
+    .then(response => response.json())
+}
+
 }
