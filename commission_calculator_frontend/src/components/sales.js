@@ -16,7 +16,7 @@ class Sales {         // create a new instances of sale
    addEventListenersProductName(){
       this.productContainer = document.getElementById('product_column');
       this.productName = document.getElementById('product_name')
-      this.productName.addEventListener('input', this.calculate.bind(this))
+  //    this.productName.addEventListener('input', this.calculate.bind(this))
    }
   /*    createProductName(ev) {
          const productValue = this.productContainer.value
@@ -26,7 +26,7 @@ class Sales {         // create a new instances of sale
    addEventListenersPrice(){
       this.priceContainer = document.getElementById('price_column')
       this.prix = document.getElementById('price_input')
-      this.prix.addEventListener('input', this.calculate.bind(this))
+   //   this.prix.addEventListener('input', this.calculate.bind(this))
    }
      /* priceValue(ev){
          console.log(this.prix.value)
@@ -37,7 +37,7 @@ class Sales {         // create a new instances of sale
    addEventListenersQuantity(){
       this.quantityContainer = document.getElementById('quantity_column')
       this.quantity = document.getElementById('quantity_input')
-      this.quantity.addEventListener('input', this.calculate.bind(this))
+    //  this.quantity.addEventListener('input', this.calculate.bind(this))
    }
       /* quantityValue(ev){
          console.log(this.quantity.value)
@@ -48,7 +48,7 @@ class Sales {         // create a new instances of sale
    addEventListenersRate(){
       this.rateContainer = document.getElementById('rate_column')
       this.commRate = document.getElementById('rate_input')
-      this.commRate.addEventListener('input', this.calculate.bind(this))
+   //   this.commRate.addEventListener('input', this.calculate.bind(this))
    }
 
      /* rateValue(ev){
@@ -60,10 +60,10 @@ class Sales {         // create a new instances of sale
    addEventListenerCommType(){
 
       this.Percentage = document.getElementById('percentage')
-      this.Percentage.addEventListener('click', this.calculate.bind(this))
+   //   this.Percentage.addEventListener('click', this.calculate.bind(this))
 
       this.basisPoint = document.getElementById('basis_point')
-      this.basisPoint.addEventListener('click', this.calculate.bind(this))
+  //    this.basisPoint.addEventListener('click', this.calculate.bind(this))
    }
    /*   commTypeValuePercentage(ev){
          console.log(this.commissionTypePercentage.value)
@@ -84,22 +84,16 @@ class Sales {         // create a new instances of sale
   }
       calculateCommission(ev){
          ev.preventDefault()
-
-       //  const calculateValue = this.calculateButton.value
          console.log([this.productName.value,
             this.prix.value,
             this.quantity.value,
             this.commRate.value ])
-         
-            
-
 
 
 
 
          //this.adapter.calculateCommission(calculateValue)
       }
-
 
      clearCommission(){
       const resetButton = document.getElementById('buttonReset')

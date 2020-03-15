@@ -6,11 +6,13 @@ class SalesAdapter{
 getSales(){     // make a fetch request to our base url
   return fetch(this.baseUrl)   // once it recv response, we parce json from the response
   .then(response => response.json())  // convert to json
- // .then(response =>response.text())  // convert to plan text (https://daveceddia.com/unexpected-token-in-json-at-position-0/)
- // .then(text => console.log(text))  // log it out
+  console.log(Sales)
+
+  //.then(response =>response.text())  // convert to plan text (https://daveceddia.com/unexpected-token-in-json-at-position-0/)
+ //.then(text => console.log(text))  // log it out
     }
 
-calculateCommission(calculateValue){
+getCommission(){
     const calculateSale = {
         Sales: calculateValue,
     }
@@ -19,7 +21,7 @@ calculateCommission(calculateValue){
         Sales:JSON.stringify({calculateSale})
     //.then(response => response.json())
     })
-}
+    }
 }
 /*
 clearCommission(){
