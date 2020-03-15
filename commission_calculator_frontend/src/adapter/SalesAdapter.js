@@ -10,9 +10,22 @@ getSales(){     // make a fetch request to our base url
  // .then(text => console.log(text))  // log it out
     }
 
-getCalculation(){
-    return fetch(this.baseUrl)
-    .then(response => response.json())
+calculateCommission(calculateValue){
+    const calculateSale = {
+        Sales: calculateValue,
+    }
+    return fetch(this.baseUrl,{
+        method: 'POST',
+        Sales:JSON.stringify({calculateSale})
+    //.then(response => response.json())
+    })
 }
+}
+/*
+clearCommission(){
+    return fetch(this.baseUrl, {
+        method: 'DELETE',
 
+    })
 }
+*/

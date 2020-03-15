@@ -20,10 +20,10 @@ ActiveRecord::Schema.define(version: 2019_12_31_053607) do
 
   create_table "sales", force: :cascade do |t|
     t.integer "commission_rate"
-    t.float "price"
-    t.float "quantity"
+    t.integer "price"
+    t.integer "quantity"
     t.integer "product_id"
-    t.float "commission_amount"
+    t.integer "commission_amount"
     t.string "commission_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

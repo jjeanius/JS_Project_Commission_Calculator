@@ -20,16 +20,15 @@
           </div>
 
           <div>
-            <p> <h3> Quantity:  <input type="interger" id="quantity_input"/> </h3> </p>
+            <p> <h3> Quantity:  <input type="integer" id="quantity_input"/> </h3> </p>
           </div>
 
           <div>
-            <p> <h3 > Commission Rate:  <input type = "interger" id="comm_rate_input" type="commission_rate"/> </p>
+            <p> <h3 > Commission Rate:  <input type = "integer" id="rate_input"/> </h3> </p>
           </div>
-
           <div>
-            <p> <h3>  Commission Type: <input class="comm_type_percentage" type ="checkbox" value="percentage"> Percentage
-                                       <input class="comm_type_bps" type ="checkbox" value="basis_point"> Basis Point </input><h3/> </p>
+            <p> <h3>  Commission Type: <input type ="checkbox" id="percentage"> Percentage
+              <input type ="checkbox" id="basis_point"> Basis Point </input><h3/> </p>
           </div>
           <br>
 
@@ -68,7 +67,7 @@
 	        </div>
 
 	        <div class="column"> <h3> Commission Rate </h3>
-	          <span id="comm_rate_column"> </span>
+	          <span id="rate_column"> </span>
 	        </div>
 
 	        <div class="column"> <h3> Commission Amount </h3>
