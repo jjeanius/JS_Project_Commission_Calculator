@@ -15,6 +15,7 @@ class SalesController < ApplicationController
     end
 
   def create
+
     @sale = Sale.new(sale_params) #  update the sales_params to accept employee_id
       if @sale.save
         render json: @sales
