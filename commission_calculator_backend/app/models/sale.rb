@@ -6,7 +6,7 @@ class Sale < ApplicationRecord
 
 
     def calculate_commission
-        if commission_type == "bps"  # basis point calculation
+        if commission_type == "basis_point"  # basis point calculation
             @commission_amount = (quantity * price)/10000 * commission_rate
         if commissiom_type == "percentage"  # percentage calculation
             @commission_amount = (quantity * price)* commission_rate/100

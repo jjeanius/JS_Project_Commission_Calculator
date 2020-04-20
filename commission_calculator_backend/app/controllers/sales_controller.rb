@@ -15,9 +15,9 @@ class SalesController < ApplicationController
     end
 
   def create
-
     @sale = Sale.new(sale_params) #  update the sales_params to accept employee_id
       if @sale.save
+      # calculate_commission
         render json: @sales
       else
         render 'new'
@@ -35,6 +35,7 @@ class SalesController < ApplicationController
   def update
     set_sale
       if @sale.update(sale_params)
+      #  calculate_commission
         render json: @sales
       else
         render 'edit'
@@ -42,8 +43,12 @@ class SalesController < ApplicationController
   end
 
   def edit
-    set_sale
-    render json: @sales
+    if set_sale
+     #  calculate_commission
+        render json: @sales
+    else
+      render 'edit'
+    end
   end
 
   def destroy
@@ -53,7 +58,7 @@ class SalesController < ApplicationController
   end
 
   def commission_amount
-   @calculate_commission = commission_amount
+   calculate_commission
    render json: @sales
   end
 
@@ -70,8 +75,8 @@ class SalesController < ApplicationController
       :quantity,
       :price,
       :commission_rate,
-      :commission_amount,
-      :commission_type)
+      :commission_type,
+      :commission_amount)
   end
 
  end

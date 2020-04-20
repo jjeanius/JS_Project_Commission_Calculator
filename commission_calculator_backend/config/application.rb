@@ -22,7 +22,7 @@ module CommissionCalculator
     config.middleware.insert_before 0, Rack::Cors do  #  This will allow you to test APIs
       allow do                                        #  while developing them locally
         origins '*'
-        resource '*', headers: :any, methods: [:get, :post]
+        resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
 
