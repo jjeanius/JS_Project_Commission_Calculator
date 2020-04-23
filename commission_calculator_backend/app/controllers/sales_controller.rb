@@ -2,11 +2,9 @@ class SalesController < ApplicationController
 
   def index
     if @sales = Sale.all
-
       render json: @sales
     end
-
-    end
+  end
 
   def new
     @sale = Sale.new(sale_params)
@@ -15,9 +13,10 @@ class SalesController < ApplicationController
     end
 
   def create
+   # binding.pry
     @sale = Sale.new(sale_params) #  update the sales_params to accept employee_id
       if @sale.save
-      # calculate_commission
+       calculate_commission
         render json: @sales
       else
         render 'new'
@@ -28,14 +27,14 @@ class SalesController < ApplicationController
     set_sale
       options = {
       include: [:products]
-    }
+      }
     render json: @sale
   end
 
   def update
     set_sale
       if @sale.update(sale_params)
-      #  calculate_commission
+        calculate_commission
         render json: @sales
       else
         render 'edit'
@@ -44,7 +43,7 @@ class SalesController < ApplicationController
 
   def edit
     if set_sale
-     #  calculate_commission
+       calculate_commission
         render json: @sales
     else
       render 'edit'
