@@ -20,22 +20,21 @@ class SalesAdapter{
       // debugger
        return fetch(this.baseUrl,{
         method: 'POST',
-        mode: 'no-cors',
+        mode: 'cors',
+
         cache: 'no-cache',
         credentials: 'same-origin',
-        headers: {
-          'Content-Type': 'application/json'
+        headers: {'Content-Type': 'application/json'
         },
-             Sale:JSON.stringify()
+
+         body: JSON.stringify(calculateSale)
         });
 
+        console.log(calculateSale);
          }
-    }
-/*
+        }
+        /*
 clearCommission(){
     return fetch(this.baseUrl, {
-        method: 'DELETE',
-
-    })
-}
-*/
+        method: 'DELETE',})
+    } */

@@ -8,7 +8,6 @@ class Sales {         // create a new instances of sale
     }
 
       createSales(){
-
          this.productContainer = document.getElementById('product_column');
          this.productName = document.getElementById('product_name')
 
@@ -27,6 +26,7 @@ class Sales {         // create a new instances of sale
       }
 
          calculateComm(ev){
+           
             ev.preventDefault()
             this.checkbox = document.querySelector('input[type="checkbox"]:checked')  // selecting ommission type checkboxes
             const calculateValue = [this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
