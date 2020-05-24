@@ -1,9 +1,8 @@
 class Product {
-    constructor(){
-        this.name = name
-    //    this.products = new Products()
-    //    this.sale = new Sale
+    constructor(saleJSON){
+        this.id = saleJSON.product_id
+        this.name = saleJSON.product.name
+
     }
 }
 
-    console.log("Product_Hello")
