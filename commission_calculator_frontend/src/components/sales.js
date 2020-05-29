@@ -5,7 +5,7 @@ class Sales {         // create a new instances of sale
       this.adapter = new SalesAdapter()  //  create adapter
      // this.bindEventListeners()
       this.fetchAndLoadSales()
-    /  this.createSales()
+      this.createSales()
     //  this.clearCommission()
     }
 
@@ -20,7 +20,7 @@ class Sales {         // create a new instances of sale
          this.quantity = document.getElementById('quantity')
 
          this.rateContainer = document.getElementById('rate_column')
-         this.commRate = document.getElementById('rate')
+         this.commRate = document.getElementById('commission_rate')
 
          this.calculateButton = document.getElementById('buttonCalculate');
          this.calculateButton.addEventListener('click', this.calculateComm.bind(this));
@@ -28,10 +28,21 @@ class Sales {         // create a new instances of sale
       }
 
          calculateComm(ev){
+            const preFetch = [
+               this.price = this.prix,
+               this.quantity = this.quantity,
+               this.product_name = this.productName,
+               this.commission_rate = this.commRate,
+               this.commission_type = this.checkedboex
+            ]
+            console.log(preFetch)
 
             ev.preventDefault()
-            this.checkbox = document.querySelector('input[type="checkbox"]:checked')  // selecting ommission type checkboxes
-            const calculateValue = [this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
+
+            this.checkbox = document.querySelector('input[type="checkbox"]:checked')  // selecting commission type checkboxes
+
+            const calculateValue = preFetch//[this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
+
             this.adapter.calculateComm(calculateValue)
          }
 
@@ -42,7 +53,7 @@ class Sales {         // create a new instances of sale
          reset (ev){
             console.log(ev.type, ev.target, ev.currentTarget);
          }
-         
+
       fetchAndLoadSales(){
          this.adapter
          .getSales()

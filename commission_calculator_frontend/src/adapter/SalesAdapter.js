@@ -1,6 +1,6 @@
 class SalesAdapter{
     constructor(){
-        this.baseUrl = 
+        this.baseUrl =
         'http://localhost:3000/sales'   // instantiate with the adapter, would set base url
     }      //  and has ability to call get Product
 
@@ -17,20 +17,23 @@ class SalesAdapter{
             sale: calculateValue
             };
      //  debugger
-       
-     fetch(this.baseUrl, {
+
+     return fetch(this.baseUrl, {
         method: 'POST',  // post request, fetch takes in 2nd argument:post
+
         headers: {
-            'content-type': 'application/json',
+            'Content-Type': 'application/json'
         },
-         body: JSON.stringify(calculateSale),
+        body: JSON.stringify(calculateSale),
+
         })
         .then(response => response.json())
         .then(calculateSale => {
         console.log(calculateSale);
 
-     //   .catch((error) => {
-     //   console.error('Error:', error);
-    });
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    })
     }
 }

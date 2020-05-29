@@ -15,7 +15,7 @@ class Sale {  // create a new instance of sale js components
 
         }
 }
-console.log(this)
+
 
 
 
