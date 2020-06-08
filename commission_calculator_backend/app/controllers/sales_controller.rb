@@ -3,7 +3,6 @@ class SalesController < ApplicationController
   def index
       @sales = Sale.all
       render json: @sales
-    end
   end
 
   def new
@@ -61,7 +60,6 @@ class SalesController < ApplicationController
   end
 
 
-
   private
 
   def set_sale
@@ -69,8 +67,9 @@ class SalesController < ApplicationController
   end
 
   def sale_params
-    params.require(:sale).permit(:product_id,
-      :product_name,
+    params.require(:sale).permit(
+      :product_id,
+     #\ :product_name,
       :price,
       :quantity,
       :commission_rate,
@@ -79,4 +78,4 @@ class SalesController < ApplicationController
     )
 
   end
-
+end
