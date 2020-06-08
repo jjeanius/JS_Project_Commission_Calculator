@@ -1,6 +1,5 @@
 class Sale {  // create a new instance of sale js components
   constructor(saleJSON){
-  //this.sale = saleJSON
     this.id = saleJSON.id
     this.commission_rate = saleJSON.commission_rate
     this.price = saleJSON.price
@@ -21,9 +20,9 @@ class Sale {  // create a new instance of sale js components
 
 /*
 [1] pry(#<SalesController>)> params
-=> <ActionController::Parameters {"sale"=>["Fixed Income-Test", "12", "1000", "21", "percentage"], "controller"=>"sales", "action"=>"create"} permitted: false>
+=> <ActionController::Parameters {"calculateSale"=>{"body"=>["Fixed Income-Test", "12", "1000", "15", "percentage"]}, "controller"=>"sales", "action"=>"create", "sale"=>{}} permitted: false>
+[2] pry(#<SalesController>)> sale_params
+ActionController::ParameterMissing: param is missing or the value is empty: sale
+from /home/jjeanius/.rvm/gems/ruby-2.6.1/gems/actionpack-5.2.4.2/lib/action_controller/metal/strong_parameters.rb:443:in `require'
 
-*[1] pry(#<SalesController>)> sale_params
-NoMethodError: undefined method `permit' for ["Fixed Income-Test", "12", "1000", "16", "percentage"]:Array
-from /mnt/c/Users/jjean/JS_Project_Commission_Calculator/commission_calculator_backend/app/controllers/sales_controller.rb:73:in `sale_params'
 */

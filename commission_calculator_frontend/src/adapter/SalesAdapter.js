@@ -17,19 +17,23 @@ class SalesAdapter{
             sale: calculateValue
             };
      //  debugger
+     //console.log(calculateSale)
 
-     return fetch(this.baseUrl, {
+        fetch(this.baseUrl, {
         method: 'POST',  // post request, fetch takes in 2nd argument:post
 
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(calculateSale),
+
+        body: JSON.stringify({calculateSale}),
 
         })
         .then(response => response.json())
         .then(calculateSale => {
+
         console.log(calculateSale);
+        calculateSale.forEach(sale =>console.log(calculateSale))
 
     })
     .catch((error) => {

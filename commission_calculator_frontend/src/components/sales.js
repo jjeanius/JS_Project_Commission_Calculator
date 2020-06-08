@@ -28,7 +28,7 @@ class Sales {         // create a new instances of sale
       }
 
          calculateComm(ev){
-            const preFetch = [
+          const preFetch = [
                this.price = this.prix,
                this.quantity = this.quantity,
                this.product_name = this.productName,
@@ -41,7 +41,8 @@ class Sales {         // create a new instances of sale
 
             this.checkbox = document.querySelector('input[type="checkbox"]:checked')  // selecting commission type checkboxes
 
-            const calculateValue = preFetch//[this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
+            const calculateValue = [this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
+           // console.log(calculateValue)
 
             this.adapter.calculateComm(calculateValue)
          }
