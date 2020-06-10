@@ -13,31 +13,17 @@ class SalesAdapter{
         }
 
     calculateComm(calculateValue){
-        const calculateSale = {
+     /*   const calculateSale = {
             sale: calculateValue
-            };
-     //  debugger
-     //console.log(calculateSale)
+            };  */
+
+     console.log(calculateValue)
 
         fetch(this.baseUrl, {
         method: 'POST',  // post request, fetch takes in 2nd argument:post
-
-        headers: {
-            'Content-Type': 'application/json'
-        },
-
-        body: JSON.stringify({calculateSale}),
-
+        body: JSON.stringify(calculateValue),
         })
-        .then(response => response.json())
-        .then(calculateSale => {
-
-        console.log(calculateSale);
-        calculateSale.forEach(sale =>console.log(calculateSale))
-
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-    })
+     .then(response => response.json())
+     .then(calculateValue => console.log(calculateValue))
     }
 }

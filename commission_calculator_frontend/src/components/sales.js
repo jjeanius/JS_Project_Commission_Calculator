@@ -3,10 +3,10 @@ class Sales {         // create a new instances of sale
       this.sales = []  // set property of sale and set it to an empty array
 
       this.adapter = new SalesAdapter()  //  create adapter
-     // this.bindEventListeners()
+      // this.bindEventListeners()
       this.fetchAndLoadSales()
       this.createSales()
-    //  this.clearCommission()
+      // this.clearCommission()
     }
 
       createSales(){
@@ -28,14 +28,14 @@ class Sales {         // create a new instances of sale
       }
 
          calculateComm(ev){
-          const preFetch = [
+          /*const preFetch = [
                this.price = this.prix,
                this.quantity = this.quantity,
                this.product_name = this.productName,
                this.commission_rate = this.commRate,
                this.commission_type = this.checkedboex
             ]
-            console.log(preFetch)
+            console.log(preFetch) */
 
             ev.preventDefault()
 
