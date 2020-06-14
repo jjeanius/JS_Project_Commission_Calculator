@@ -29,13 +29,13 @@ class Sales {         // create a new instances of sale
 
          calculateComm(ev){
           /*const preFetch = [
-               this.price = this.prix,
+               this.prix = this.price,
                this.quantity = this.quantity,
-               this.product_name = this.productName,
-               this.commission_rate = this.commRate,
-               this.commission_type = this.checkedboex
+               this.productName = this.product_name,
+               this.commRate = this.commission_rate,
+               this.checkbox = this.commission_type
             ]
-            console.log(preFetch) */
+            console.log(preFetch)  */
 
             ev.preventDefault()
 

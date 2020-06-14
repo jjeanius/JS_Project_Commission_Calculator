@@ -27,3 +27,10 @@ class SalesAdapter{
      .then(calculateValue => console.log(calculateValue))
     }
 }
+
+/*
+["Fixed Income-Test", "12", "1000", "15", "percentage"]
+SalesAdapter.js:27 {status: 400, error: "Bad Request", exception: 
+"#<ActionController::ParameterMissing: param is missing or the value is empty: sale>", 
+traces: {…}}
+*/
