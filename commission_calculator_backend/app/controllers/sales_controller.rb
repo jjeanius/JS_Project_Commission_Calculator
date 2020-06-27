@@ -12,10 +12,11 @@ class SalesController < ApplicationController
     end
 
   def create
- #binding.pry
     @sale = Sale.new(sale_params) #  update the sales_params to accept employee_id
-       if @sale.save
-          calculate_commission
+      # binding.pry
+    if @sale.save
+        calculate_commission
+         binding.pry
             render json: @sale, status: 200
 
     end
@@ -76,6 +77,15 @@ class SalesController < ApplicationController
       :commission_type,
       :commission_amount
     )
-
   end
+
+  def calculate_commission
+    if @commission_type == "basis_point"  # basis point calculation
+      @sale.commission_amount = (@sale.quantity * @sale.price)/10000 * @sale.commission_rate
+    else #   commissiom_type == "percentage"  # percentage calculation
+        @sale.commission_amount = (@sale.quantity * @sale.price)* @sale.commission_rate/100
+    end
+  end
+
+
 end
