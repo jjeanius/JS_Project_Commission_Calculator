@@ -28,34 +28,19 @@ class Sales {         // create a new instances of sale
       }
 
          calculateComm(ev){
-          /*const preFetch = [
-               this.prix = this.price,
-               this.quantity = this.quantity,
-               this.productName = this.product_name,
-               this.commRate = this.commission_rate,
-               this.checkbox = this.commission_type
-            ]
-            console.log(preFetch)  */
 
             ev.preventDefault()
 
             this.checkbox = document.querySelector('input[type="checkbox"]:checked')  // selecting commission type checkboxes
 
-            const calculateValue = [this.productName.value, this.prix.value, this.quantity.value, this.commRate.value, this.checkbox.value]          // save these element to calculateValue so we can make POST request using adapter
-           // console.log(calculateValue)
+            const calculateValue = { product_id: 1,commission_rate: this.commRate.value, price: this.prix.value, quantity: this.quantity.value, commission_amount: 0, commission_type: this.checkbox.value}
+
+          console.log(calculateValue)
 
             this.adapter.calculateComm(calculateValue)
          }
 
-      clearCommission(){
-         const resetButton = document.getElementById('buttonReset')
-         resetButton.addEventListener('click', this.reset.bind(this))
-      }
-         reset (ev){
-            console.log(ev.type, ev.target, ev.currentTarget);
-         }
-
-      fetchAndLoadSales(){
+         fetchAndLoadSales(){
          this.adapter
          .getSales()
          .then(sales => {

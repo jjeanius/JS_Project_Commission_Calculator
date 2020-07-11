@@ -19,8 +19,11 @@ class SalesAdapter{
 
      console.log(calculateValue)
 
-        fetch(this.baseUrl, {
+       fetch(this.baseUrl, {
         method: 'POST',  // post request, fetch takes in 2nd argument:post
+        headers: {
+            'Content-Type': 'application/json'
+          },
         body: JSON.stringify(calculateValue),
         })
      .then(response => response.json())
@@ -30,7 +33,7 @@ class SalesAdapter{
 
 /*
 ["Fixed Income-Test", "12", "1000", "15", "percentage"]
-SalesAdapter.js:27 {status: 400, error: "Bad Request", exception: 
-"#<ActionController::ParameterMissing: param is missing or the value is empty: sale>", 
+SalesAdapter.js:27 {status: 400, error: "Bad Request", exception:
+"#<ActionController::ParameterMissing: param is missing or the value is empty: sale>",
 traces: {…}}
 */
